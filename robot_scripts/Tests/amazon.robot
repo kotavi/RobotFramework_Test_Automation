@@ -21,6 +21,13 @@ User must sign in to checkout
     Click Element  xpath: //*[contains(text(), "Proceed to checkout")]
     Page Should Contain Element  createAccountSubmit
     Go Back
+    Close Browser
+
+User can click on logo image
+    [Documentation]  Simple example
+    [Tags]  smoke
+    Open Browser  https://www.amazon.com  chrome
+    Wait Until Page Contains  Hello, Sign in
     Click Link  xpath: //*[@id="nav-logo"]/a[1]
     Click Link  /ref=nav_logo
     Click Element  css: a[aria-label="Women's"]
@@ -29,5 +36,3 @@ User must sign in to checkout
     Close Browser
 
 #*** Keywords ***
-
-[Teardown]  Close Browser
