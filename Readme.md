@@ -21,3 +21,15 @@ $ python3 -m pip install robotframework-seleniumlibrary
 ### How to execute .robot scenario
 
 	robot -d Results/ Tests/amazon.robot
+
+## If you decide to run Robot Framework tests from Jenkins
+
+```
+FROM jenkins/jenkins:lts
+USER root
+RUN apt-get update && apt-get install -y python3 python3-pip
+RUN python3 -m pip install robotframework
+RUN python3 -m pip install robotframework-seleniumlibrary
+#USER jenkins
+#........
+```
