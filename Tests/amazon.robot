@@ -30,9 +30,9 @@ User can click on logo image
     Wait Until Page Contains  Hello, Sign in
     Click Link  xpath: //*[@id="nav-logo"]/a[1]
     Click Link  /ref=nav_logo
-    Click Element  css: a[aria-label="Women's"]
-    Click Image  Disguise Women's Rose Gold Minnie Deluxe Adult Costume
-    Page Should Contain Element  add-to-cart-button
+#    Click Element  css: a[aria-label="Women's"]
+#    Click Image  Disguise Women's Rose Gold Minnie Deluxe Adult Costume
+#    Page Should Contain Element  add-to-cart-button
     Close Browser
 
 #*** Keywords ***

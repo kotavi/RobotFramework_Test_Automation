@@ -10,6 +10,10 @@ https://www.linkedin.com/learning/robot-framework-test-automation-level-1-seleni
 ```
 $ python3 -m pip install robotframework
 $ python3 -m pip install robotframework-seleniumlibrary
+
+$ $ robot --version
+Robot Framework 3.1.2 (Python 3.7.4 on darwin)
+
 ```
 
 ### To find required Robotframework libraries
@@ -18,9 +22,23 @@ $ python3 -m pip install robotframework-seleniumlibrary
 	https://robotframework.org/#libraries
 	https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
 
-### How to execute .robot scenario
+### How to run scenarios
 
-	robot -d Results/ Tests/amazon.robot
+1. Execute specific test suite
+
+	`robot -d Results/ Tests/amazon.robot`
+
+2. Execute all test suites
+    
+    `robot -d Results/ Tests`
+
+3. Execute test suites providing top level suite title
+
+    `robot -d Results/ -N "Full Regression" tests`
+
+4. Execute test suites if .robot file has spaces
+
+    `robot -d Results/ "tests/<test suite name with spaces>"`
 
 ## If you decide to run Robot Framework tests from Jenkins
 
