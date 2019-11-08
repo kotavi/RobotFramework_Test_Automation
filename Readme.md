@@ -40,6 +40,14 @@ Robot Framework 3.1.2 (Python 3.7.4 on darwin)
 
     `robot -d Results/ "tests/<test suite name with spaces>"`
 
+5. Execute specific test case
+
+    `robot -d Results/ -t "User can click on logo image" tests`
+
+6. Execute test cases with specific tag
+
+    `robot -d Results/ -i smoke tests`
+
 ## If you decide to run Robot Framework tests from Jenkins
 
 ```

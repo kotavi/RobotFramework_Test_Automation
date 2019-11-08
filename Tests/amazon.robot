@@ -8,7 +8,7 @@ Library  SeleniumLibrary
 *** Test Cases ***
 User must sign in to checkout
     [Documentation]  Simple example
-    [Tags]  smoke
+    [Tags]  search
     Open Browser  https://www.amazon.com  chrome
     Wait Until Page Contains  Hello, Sign in
     Input Text  id=twotabsearchtextbox  wall nails
