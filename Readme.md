@@ -50,7 +50,8 @@ Robot Framework 3.1.2 (Python 3.7.4 on darwin)
 
 ## If you decide to run Robot Framework tests from Jenkins
 
-```
+Create Dockerfile with:
+```text
 FROM jenkins/jenkins:lts
 USER root
 RUN apt-get update && apt-get install -y python3 python3-pip
