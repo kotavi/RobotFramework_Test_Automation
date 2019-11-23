@@ -1,14 +1,15 @@
 *** Settings ***
 Documentation    All the keywords associated with testing the Amazon website
 
+Resource  Page_Objects/LandingPage.robot
+Resource  Page_Objects/TopNavigation.robot
 Library  SeleniumLibrary
 
 *** Keywords ***
 Search for products
-    Go to  https://www.amazon.com
-    Wait Until Page Contains  Hello, Sign in
-    Input Text  id=twotabsearchtextbox  wall nails
-    Click Button  xpath=//*[@id="nav-search"]/form/div[2]/div/input
+    LandingPage.Load
+    LandingPage.Verify page loaded
+    TopNavigation.Search for product
     Wait Until Page Contains  results for "wall nails"
 
 Select Product from Search result
@@ -24,7 +25,7 @@ Begin Checkout
     Page Should Contain Element  createAccountSubmit
 
 Follow the Amazon Logo
-    Go to  https://www.amazon.com
-    Wait Until Page Contains  Hello, Sign in
-    Click Link  xpath: //*[@id="nav-logo"]/a[1]
-    Click Link  /ref=nav_logo
+    LandingPage.Load
+    LandingPage.Verify page loaded
+    TopNavigation.Click on Logo
+    LandingPage.Verify page loaded
